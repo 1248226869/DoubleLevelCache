@@ -1,7 +1,7 @@
 # 使用文档
 
 ## 使用说明
-1. 导包。
+1. 从GitHub上下载该工程到本地，然后mvn clean install。最后导包到所需工程。
 ```
 <dependency>
     <groupId>com.chaoxing.academy.component</groupId>
