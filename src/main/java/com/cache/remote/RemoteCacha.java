@@ -1,6 +1,6 @@
-package com.cach.remote;
+package com.cache.remote;
 
-import com.cach.domain.CacheSpace;
+import com.cache.domain.CacheSpace;
 import org.redisson.api.RMapCache;
 import org.redisson.api.RedissonClient;
 import org.slf4j.Logger;

@@ -1,7 +1,7 @@
-package com.cach.config;
+package com.cache.config;
 
-import com.cach.domain.CacheSpace;
-import com.cach.server.CacheAttributeService;
+import com.cache.domain.CacheSpace;
+import com.cache.server.CacheAttributeService;
 import com.google.common.cache.CacheBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

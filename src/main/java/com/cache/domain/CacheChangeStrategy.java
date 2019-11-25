@@ -1,4 +1,4 @@
-package com.cach.domain;
+package com.cache.domain;
 
 /**
  * @author zhao tailen

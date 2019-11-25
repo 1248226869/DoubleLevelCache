@@ -1,4 +1,4 @@
 # Auto Configure
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.cach.config.CacheAttributeYmlConfig,\
-  com.cach.config.CacheConfiguration,\
-  com.cach.config.RedissonConfig,com.cach.server.CacheAttributeService
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.cache.config.CacheAttributeYmlConfig,\
+  com.cache.config.CacheConfiguration,\
+  com.cache.config.RedissonConfig,com.cache.server.CacheAttributeService

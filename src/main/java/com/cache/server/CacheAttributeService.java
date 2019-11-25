@@ -1,12 +1,12 @@
-package com.cach.server;
+package com.cache.server;
 
-import com.cach.config.CacheAttributeYmlConfig;
-import com.cach.domain.CacheSpace;
-import com.cach.remote.RemoteCacha;
-import com.cach.doubleLevel.DoubleLevel;
-import com.cach.domain.CacheChangeStrategy;
-import com.cach.domain.CachePriority;
-import com.cach.local.LocalCacha;
+import com.cache.config.CacheAttributeYmlConfig;
+import com.cache.domain.CacheSpace;
+import com.cache.remote.RemoteCacha;
+import com.cache.doubleLevel.DoubleLevel;
+import com.cache.domain.CacheChangeStrategy;
+import com.cache.domain.CachePriority;
+import com.cache.local.LocalCacha;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.redisson.api.RedissonClient;

@@ -1,4 +1,4 @@
-package com.cach.config;
+package com.cache.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;

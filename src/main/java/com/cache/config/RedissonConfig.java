@@ -1,4 +1,4 @@
-package com.cach.config;
+package com.cache.config;
 
 
 import org.redisson.Redisson;

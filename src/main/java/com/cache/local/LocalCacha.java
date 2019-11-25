@@ -1,6 +1,6 @@
-package com.cach.local;
+package com.cache.local;
 
-import com.cach.domain.CacheSpace;
+import com.cache.domain.CacheSpace;
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
 import org.slf4j.Logger;

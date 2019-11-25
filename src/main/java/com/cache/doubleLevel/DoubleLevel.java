@@ -1,9 +1,9 @@
-package com.cach.doubleLevel;
+package com.cache.doubleLevel;
 
-import com.cach.domain.CacheChangeStrategy;
-import com.cach.domain.CachePriority;
-import com.cach.domain.CacheSpace;
-import com.cach.local.LocalCacheRemovalListener;
+import com.cache.domain.CacheChangeStrategy;
+import com.cache.domain.CachePriority;
+import com.cache.domain.CacheSpace;
+import com.cache.local.LocalCacheRemovalListener;
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
 import org.redisson.api.RMapCache;
