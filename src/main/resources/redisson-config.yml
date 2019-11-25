@@ -1,0 +1,27 @@
+#Redisson配置
+singleServerConfig:
+  address: "redis://10.0.9.10:50001"
+  password: f!K@DzJ##S8./-
+  clientName: null
+  database: 9
+  idleConnectionTimeout: 10000
+  pingTimeout: 1000
+  connectTimeout: 100000
+  timeout: 3000
+  retryAttempts: 3
+  retryInterval: 1500
+  reconnectionTimeout: 3000
+  failedAttempts: 3
+  subscriptionsPerConnection: 5
+  subscriptionConnectionMinimumIdleSize: 10
+  subscriptionConnectionPoolSize: 50
+  connectionMinimumIdleSize: 32
+  connectionPoolSize: 64
+  dnsMonitoringInterval: 5000
+  #dnsMonitoring: false
+
+threads: 1000
+nettyThreads: 1000
+codec:
+  class: "org.redisson.codec.JsonJacksonCodec"
+transportMode: "NIO"
