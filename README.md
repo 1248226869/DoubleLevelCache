@@ -4,9 +4,9 @@
 1. 从GitHub上下载该工程到本地，然后mvn clean install。最后导包到所需工程。
 ```
 <dependency>
-    <groupId>com.chaoxing.academy.component</groupId>
-    <artifactId>spring-cacheComponent</artifactId>
-    <version>{component.cache.version}</version>
+    <groupId>com.cache</groupId>
+    <artifactId>doubleLevelCache</artifactId>
+    <version>1.0.0</version>
 </dependency>
 ```
 
