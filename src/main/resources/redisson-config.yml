@@ -1,9 +1,9 @@
-#Redisson配置
+#set Redisson 【please watch https://github.com/redisson/redisson/wiki/2.-Configuration】
 singleServerConfig:
-  address: "redis://10.0.9.10:50001"
-  password: f!K@DzJ##S8./-
+  address: "redis://{ip}:{port}"
+  password:
   clientName: null
-  database: 9
+  database:
   idleConnectionTimeout: 10000
   pingTimeout: 1000
   connectTimeout: 100000

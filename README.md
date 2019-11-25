@@ -77,21 +77,8 @@ cache:
       twoLevelsRatio: 0.5
       maxSize: 6
 ```
-* 在静态块中设置。示例如下:
-```
-    static {
-        CacheSpaceContainer cacheSpaceContainer=CacheSpaceContainer.getCacheSpaceContainer();
-        CacheSpace cacheSpace1=new CacheSpace();
-        cacheSpace1.setName("static");
-        cacheSpace1.setCachePriority(CachePriority.ONLY_LOCAL);
-        cacheSpace1.setMaxSize(12);
-        cacheSpace1.setIdleDate(1200);
-        cacheSpace1.setExpireDate(3600);
-        cacheSpaceContainer.add(cacheSpace1);
-    }
-```
 
-4. 在需要缓存的方法上添加@Cacheable创建、使用缓存，@CacheEvict清理指定key的缓存。如下示例:
+4. 在需要缓存的方法上添加@Cacheable创建、使用缓存，@CacheEvict清理指定key的缓存【Springboot中的注解】。如下示例:
 
 ```
 
@@ -107,4 +94,6 @@ cache:
             condition = "#name != '' "  //过滤掉参数id为空的情况
     )
 ```
-5. 注意：若缓存结果为Obj，则该Obj需要实现序列化，并且有无参构造函数
+5. 在redisson-config.yml配置redis的连接属性
+6. 缓存驱逐策略均为LRU
+7. 注意：若缓存结果为Obj，则该Obj需要实现序列化，并且有无参构造函数

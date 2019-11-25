@@ -44,29 +44,15 @@ public class CacheAttributeService {
 
 
     public List<CacheSpace> handleCacheAttribute() {
-        CacheSpaceContainer cacheSpaceContainer=CacheSpaceContainer.getCacheSpaceContainer();
-        List<CacheSpace> cacheSpaceList=cacheSpaceContainer.getCacheSpaces();
-        if (cacheSpaceList == null) {
-            cacheSpaceList=new ArrayList<CacheSpace>();
-        }else {
-            //处理静态代码块中的CacheSpace
-            for (int i=0; i<cacheSpaceList.size();i++){
-                CacheSpace cacheSpace=cacheSpaceList.get(i);
+        List<CacheSpace> cacheSpaceList=new ArrayList<CacheSpace>();
 
-                if (cacheSpace == null || StringUtils.isBlank(cacheSpace.getName())){
-                    continue;
-                }
-
-                cacheSpaceList.set(i,handleCacheSpaceInStatic(cacheSpace));
-            }
-        }
         List<Map<String, String>> cacheSpaceAttributeMapList=cacheAttributeYmlConfig.getLimitSizeList();
 
         if (cacheSpaceAttributeMapList == null || cacheSpaceAttributeMapList.size() == 0) {
             return cacheSpaceList;
         }
         for (Map<String, String> cacheSpaceAttributeMap : cacheSpaceAttributeMapList) {
-            if (StringUtils.isBlank(cacheSpaceAttributeMap.get("name"))){
+            if (StringUtils.isBlank(cacheSpaceAttributeMap.get("name"))) {
                 continue;
             }
             CacheSpace cacheSpaca=createCacheSpaca(cacheSpaceAttributeMap);
@@ -86,7 +72,7 @@ public class CacheAttributeService {
         List<Cache> cacheList=new ArrayList<Cache>();
 
         for (CacheSpace cacheSpace : cacheSpaceList) {
-            log.debug("cache is {}",cacheSpace.toString());
+            log.debug("cache is {}", cacheSpace.toString());
             if (Objects.isNull(cacheSpace.getName())) {
                 continue;
             }
@@ -121,25 +107,6 @@ public class CacheAttributeService {
         SimpleCacheManager cacheManager=new SimpleCacheManager();
         cacheManager.setCaches(cacheList);
         return cacheManager;
-    }
-
-    private CacheSpace handleCacheSpaceInStatic(CacheSpace cacheSpace){
-        if (cacheSpace.getExpireDate() == null){
-             cacheSpace.setExpireDate(EXPIRE_DATE);
-        }
-        if (cacheSpace.getIdleDate() == null){
-            cacheSpace.setIdleDate(IDLE);
-        }
-        if (cacheSpace.getMaxSize() == null){
-            cacheSpace.setMaxSize(MAX_SIZE);
-        }
-        if (cacheSpace.getAccessThreshold() == null){
-            cacheSpace.setAccessThreshold(ACCESS_THRESHOLD);
-        }
-        if (cacheSpace.getTwoLevelsRatio() == null){
-            cacheSpace.setTwoLevelsRatio(TWOLEVELS_RATIO);
-        }
-        return cacheSpace;
     }
 
     private CacheSpace createCacheSpaca(Map<String, String> cacheSpaceAttributeMap) {
