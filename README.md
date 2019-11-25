@@ -1,6 +1,6 @@
-# 使用文档
+# 使用说明
 
-## 使用说明
+## 使用说明【Springboot&Springcloud】
 1. 从GitHub上下载该工程到本地，然后mvn clean install。最后导包到所需工程。
 ```
 <dependency>
@@ -94,6 +94,6 @@ cache:
             condition = "#name != '' "  //过滤掉参数id为空的情况
     )
 ```
-5. 在redisson-config.yml配置redis的连接属性
+5. 在redisson-config.yml配置redis的连接属性【该文件可以放到应用工程中】
 6. 缓存驱逐策略均为LRU
 7. 注意：若缓存结果为Obj，则该Obj需要实现序列化，并且有无参构造函数
